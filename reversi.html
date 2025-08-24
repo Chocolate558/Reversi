@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rev_style.css">
+  <!--<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">-->
+  <title>Reversi</title>
+</head>
+<body>
+
+  <div class="popup">
+    <button class="buttons com">With Computer</button>
+    <button class="buttons two">Two Players</button>
+  </div>
+
+  <div class="winner">
+    <span class="who-won"></span>
+    <button class="buttons restart">RESTART</button>
+  </div>
+
+  <div class="wholegame"> <!--whole game-->
+    <h1>Reversi</h1>
+
+    <div class="playgame">
+      <div class="player1">
+        <div class="turn0">My Turn</div>
+        <div class="circle white"></div>
+        <div class="marks0">2</div>
+      </div>
+
+      <div class="board">
+        <div class="rows">
+          <button class="square" data-id="0"><div class="circle"></div></button>
+          <button class="square" data-id="1"><div class="circle"></div></button>
+          <button class="square" data-id="2"><div class="circle"></div></button>
+          <button class="square" data-id="3"><div class="circle"></div></button>
+          <button class="square" data-id="4"><div class="circle"></div></button>
+          <button class="square" data-id="5"><div class="circle"></div></button>
+          <button class="square" data-id="6"><div class="circle"></div></button>
+          <button class="square" data-id="7"><div class="circle"></div></button>
+        </div>
+      
+        <div class="rows">
+          <button class="square" data-id="8"><div class="circle"></div></button>
+          <button class="square" data-id="9"><div class="circle"></div></button>
+          <button class="square" data-id="10"><div class="circle"></div></button>
+          <button class="square" data-id="11"><div class="circle"></div></button>
+          <button class="square" data-id="12"><div class="circle"></div></button>
+          <button class="square" data-id="13"><div class="circle"></div></button>
+          <button class="square" data-id="14"><div class="circle"></div></button>
+          <button class="square" data-id="15"><div class="circle"></div></button>
+        </div>
+      
+        <div class="rows">
+          <button class="square" data-id="16"><div class="circle"></div></button>
+          <button class="square" data-id="17"><div class="circle"></div></button>
+          <button class="square" data-id="18"><div class="circle"></div></button>
+          <button class="square" data-id="19"><div class="circle"></div></button>
+          <button class="square" data-id="20"><div class="circle"></div></button>
+          <button class="square" data-id="21"><div class="circle"></div></button>
+          <button class="square" data-id="22"><div class="circle"></div></button>
+          <button class="square" data-id="23"><div class="circle"></div></button>
+        </div>
+      
+        <div class="rows">
+          <button class="square" data-id="24"><div class="circle"></div></button>
+          <button class="square" data-id="25"><div class="circle"></div></button>
+          <button class="square" data-id="26"><div class="circle"></div></button>
+          <button class="square" data-id="27"><div class="black-circle circle"></div></button>
+          <button class="square" data-id="28"><div class="white-circle circle"></div></button>
+          <button class="square" data-id="29"><div class="circle"></div></button>
+          <button class="square" data-id="30"><div class="circle"></div></button>
+          <button class="square" data-id="31"><div class="circle"></div></button>
+        </div>
+      
+        <div class="rows">
+          <button class="square" data-id="32"><div class="circle"></div></button>
+          <button class="square" data-id="33"><div class="circle"></div></button>
+          <button class="square" data-id="34"><div class="circle"></div></button>
+          <button class="square" data-id="35"><div class="white-circle circle"></div></button>
+          <button class="square" data-id="36"><div class="black-circle circle"></div></button>
+          <button class="square" data-id="37"><div class="circle"></div></button>
+          <button class="square" data-id="38"><div class="circle"></div></button>
+          <button class="square" data-id="39"><div class="circle"></div></button>
+        </div>
+      
+        <div class="rows">
+          <button class="square" data-id="40"><div class="circle"></div></button>
+          <button class="square" data-id="41"><div class="circle"></div></button>
+          <button class="square" data-id="42"><div class="circle"></div></button>
+          <button class="square" data-id="43"><div class="circle"></div></button>
+          <button class="square" data-id="44"><div class="circle"></div></button>
+          <button class="square" data-id="45"><div class="circle"></div></button>
+          <button class="square" data-id="46"><div class="circle"></div></button>
+          <button class="square" data-id="47"><div class="circle"></div></button>
+        </div>
+      
+        <div class="rows">
+          <button class="square" data-id="48"><div class="circle"></div></button>
+          <button class="square" data-id="49"><div class="circle"></div></button>
+          <button class="square" data-id="50"><div class="circle"></div></button>
+          <button class="square" data-id="51"><div class="circle"></div></button>
+          <button class="square" data-id="52"><div class="circle"></div></button>
+          <button class="square" data-id="53"><div class="circle"></div></button>
+          <button class="square" data-id="54"><div class="circle"></div></button>
+          <button class="square" data-id="55"><div class="circle"></div></button>
+        </div>
+      
+        <div class="rows">
+          <button class="square" data-id="56"><div class="circle"></div></button>
+          <button class="square" data-id="57"><div class="circle"></div></button>
+          <button class="square" data-id="58"><div class="circle"></div></button>
+          <button class="square" data-id="59"><div class="circle"></div></button>
+          <button class="square" data-id="60"><div class="circle"></div></button>
+          <button class="square" data-id="61"><div class="circle"></div></button>
+          <button class="square" data-id="62"><div class="circle"></div></button>
+          <button class="square" data-id="63"><div class="circle"></div></button>
+        </div>
+      </div>
+    
+      <div class="player2">
+        <div class="turn1"></div>
+        <div class="circle black"></div>
+        <div class="marks1">2</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="rev_script.js"></script>
+</body>
+</html>

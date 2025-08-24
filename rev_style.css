@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(2, 49, 2);
+}
+.playgame {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 90vh;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 50px;
+}
+.button-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.buttons {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  width: 240px;
+  height: 70px;
+  background-color: yellow;
+  border: none;
+  transition: all ease 0.3s;
+}
+.buttons:hover {
+  transform: scale(1.06);
+}
+.buttons.active {
+  display: none;
+}
+.rows {
+  display: flex;
+}
+.square {
+  width: 70px;
+  height: 70px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.3s;
+}
+.square0 {
+  background-color: green;
+  transition: all ease 0.3s;
+}
+.square1 {
+  background-color: greenyellow;
+  transition: all ease 0.3s;
+}
+.player1, .player2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 125px;
+  height: 225px;
+  border: 1px solid black;
+  background-color: green;
+  border-radius: 20px;
+  margin: 0 20px;
+  position: relative;
+}
+.player2 {
+  background-color: greenyellow;
+}
+.player1 img, .player2 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid black;
+  object-fit: cover;
+}
+.marks0, .marks1 {
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 70px;
+  height: 70px;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+
+  transition: all ease 0.8s;
+  transform-style: preserve-3d;
+}
+.circle.white {
+  background-color: white;
+  transform: scale(1);
+}
+.circle.black {
+  background-color: black;
+  transform: scale(1);
+}
+.white-circle {
+  background-color: white;
+  transform: scale(1);
+  transition: all ease 0.5s;
+}
+.black-circle {
+  background-color: black;
+  transform: scale(1);
+  transition: all ease 0.5s;
+}
+.white-circle.whiteactive {
+  transform: rotateY(180deg);
+  background-color: black;
+}
+.black-circle.blackactive {
+  transform: rotateY(180deg);
+  background-color: white;
+}
+.next-circle {
+  background: transparent;
+  border: 7px solid rgba(0, 0, 0, 0.5);
+  transition: all ease 0.3s;
+  transform: scale(1);
+}
+.turn0, .turn1 {
+  width: 100px;
+  height: 40px;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  background-color: black;
+  color: gold;
+  position: absolute;
+  top: -20px;
+  padding-top: 5px;
+  border-radius: 5px;
+}
+.popup, .winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 100;
+  background-color: white;
+  width: 520px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.winner {
+  flex-direction: column;
+}
+.popup.popactive, .winner.winneractive {
+  transform: translate(-50%, -50%) scale(1);
+}
+.who-won {
+  font-size: 30px;
+}
+.wholegame.wholeblur {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
